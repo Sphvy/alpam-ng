@@ -1,20 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class trueanswer : MonoBehaviour
+public class restartScene : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        float[] array = { 9, 0, -9 };
-        int randomNum = Random.Range(0, array.Length);
-        transform.position = new Vector3(array[randomNum], -4, 0f);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    public void sceneres()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

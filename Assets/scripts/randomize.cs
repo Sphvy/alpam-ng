@@ -16,20 +16,20 @@ public class randomize : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rightanswer.transform.position.x == -7)
+        if (rightanswer.transform.position.x < -1f)
         {
-            wronganswer1.transform.position = new Vector3(0f, -4f, 0f);
-            wronganswer2.transform.position = new Vector3(7f, -4f, 0f);
+            wronganswer1.transform.position = new Vector3(0, -4f, 0f);
+            wronganswer2.transform.position = new Vector3(9f, -4f, 0f);
         }
         else if (rightanswer.transform.position.x == 0)
         {
-            wronganswer1.transform.position = new Vector3(7f, -4f, 0f);
-            wronganswer2.transform.position = new Vector3(-7f, -4f, 0f);
+            wronganswer1.transform.position = new Vector3(9f, -4f, 0f);
+            wronganswer2.transform.position = new Vector3(-9f, -4f, 0f);
         }
-        else if (rightanswer.transform.position.x == 7)
+        else if (rightanswer.transform.position.x > 1f)
         {
-            wronganswer1.transform.position = new Vector3(-7f, -4f, 0f);
-            wronganswer2.transform.position = new Vector3(0f, -4f, 0f);
+            wronganswer1.transform.position = new Vector3(-9f, -4f, 0f);
+            wronganswer2.transform.position = new Vector3(0, -4f, 0f);
         }
     }
 }
